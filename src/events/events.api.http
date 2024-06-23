@@ -4,7 +4,6 @@ GET http://localhost:3000/events
 ###
 GET http://localhost:3000/events/{{ eventId }}
 
-
 ###
 # @name createEvent
 POST http://localhost:3000/events
