@@ -16,7 +16,7 @@ datasource db {
 model Event{
   id String @id @default(uuid())
   name String
-  descripton String
+  description String
   price Float
   date DateTime
   createdAt DateTime @default(now())
