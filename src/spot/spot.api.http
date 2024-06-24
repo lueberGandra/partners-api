@@ -1,0 +1,29 @@
+###
+GET http://localhost:3000/events/{{ eventId }}/spots
+
+###
+GET http://localhost:3000/events/{{ eventId }}/spots/{{spotId}}
+
+###
+# @name createSpot
+POST http://localhost:3000/events/{{ eventId }}/spots
+Content-Type:  application/json
+
+{
+    "name": "First Event"    
+}
+###
+
+@eventId = 28cf3578-3ef1-41d0-8590-bdf9e6d9c616
+@spotId = {{ createSpot.response.body.id }}
+
+###
+PATCH  http://localhost:3000/events/{{ eventId }}/spots/{{spotId}}
+Content-Type:  application/json
+
+{    
+    "name":"First Spot"  
+}
+
+###
+DELETE  http://localhost:3000/events/{{ eventId }}/spots/{{spotId}}
